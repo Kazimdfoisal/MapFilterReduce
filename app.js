@@ -31,7 +31,9 @@ const display = async()=>{
     
     }).map((element)=>{
         const {name, id, username,phone,email,address}= element;
-        const {street, zipcode}= address;
+        const {street, zipcode, geo} = address;
+        const {lat , lng}= geo;
+
         return`
           <div>
         <p>${id}</p>
@@ -40,6 +42,8 @@ const display = async()=>{
         <p>${phone}</p>
         <p>${email}</p>
         <p>${street} , ${zipcode}</p>
+        <p>${lat} , ${lng}</p>
+
 
         </div>
         <br>
