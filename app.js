@@ -25,7 +25,7 @@ const display = async()=>{
         else if (eventData.email.toLowerCase().includes(inputValue.toLowerCase())) {
             return eventData;
         }
-        else if (eventData.id.includes(Number(inputValue))) {
+        else if (eventData.id===(Number(inputValue))) {
             return eventData;
         }
     
