@@ -30,9 +30,10 @@ const display = async()=>{
         }
     
     }).map((element)=>{
-        const {name, id, username,phone,email,address}= element;
+        const {name, id, username,phone,email,address,website,company}= element;
         const {street, zipcode, geo} = address;
         const {lat , lng}= geo;
+        const{catchPhrase,bs}= company;        
 
         return`
           <div>
@@ -43,6 +44,8 @@ const display = async()=>{
         <p>${email}</p>
         <p>${street} , ${zipcode}</p>
         <p>${lat} , ${lng}</p>
+        <p>${website}</p>
+        <p>${catchPhrase} , ${bs}</p>
 
 
         </div>
@@ -57,3 +60,4 @@ display();
 input.addEventListener("input", ()=>{
     display();
 })
+
