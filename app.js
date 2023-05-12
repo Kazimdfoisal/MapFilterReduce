@@ -33,7 +33,7 @@ const display = async()=>{
         const {name, id, username,phone,email,address,website,company}= element;
         const {street, zipcode, geo} = address;
         const {lat , lng}= geo;
-        const{catchPhrase,bs}= company;        
+        const{catchPhrase,bs , name:companyName}= company;        
 
         return`
           <div>
@@ -45,7 +45,8 @@ const display = async()=>{
         <p>${street} , ${zipcode}</p>
         <p>${lat} , ${lng}</p>
         <p>${website}</p>
-        <p>${catchPhrase} , ${bs}</p>
+        <p>${catchPhrase} ,${bs}</p>
+        <p>${companyName}</p>
 
 
         </div>
